@@ -1,0 +1,35 @@
+{
+    "name": "peertube-plugin-hardware-transcode-nvenc",
+    "version": "0.0.1",
+    "license": "MIT",
+    "description": "Plugin that adds transcode profiles which use NVIDIA NVENC for hardware acceleration",
+    "engine": {
+        "peertube": ">=5.1.0"
+    },
+    "keywords": [
+        "peertube",
+        "plugin"
+    ],
+    "homepage": "https://github.com/ryanho/peertube-plugin-hardware-transcode-nvenc",
+    "author": "ryanho",
+    "bugs": "https://github.com/ryanho/peertube-plugin-hardware-transcode-nvenc/issues",
+    "library": "./dist/main.js",
+    "files": [
+        "/dist"
+    ],
+    "staticDirs": {},
+    "css": [],
+    "clientScripts": [],
+    "translations": {},
+    "scripts": {
+        "clean": "rm -rf dist/*",
+        "prepare": "npm run build",
+        "build": "npx tsc --build src/tsconfig.json",
+        "watch": "npx tsc --build src/tsconfig.json --watch"
+    },
+    "devDependencies": {
+        "@peertube/peertube-types": "^5.1.0",
+        "@tsconfig/node16": "^1.0.3",
+        "typescript": "^5.1.6"
+    }
+}
