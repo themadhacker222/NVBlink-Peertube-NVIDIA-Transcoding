@@ -23,7 +23,7 @@ const DEFAULT_BITRATES : Map<VideoResolution, number> = new Map([
 function getRandomGPU(min : number, max : number) : number  {
   let maxG = pluginSettings.numGPUs;
   min = Math.ceil(min);
-  max = Math.floor(maxG - 1);
+  max = Math.floor(maxG);
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
