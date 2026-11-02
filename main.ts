@@ -8,7 +8,7 @@ let transcodingManager : PluginTranscodingManager
 const DEFAULT_HARDWARE_DECODE : boolean = false
 const DEFAULT_VOD_QUALITY : number = 15
 const DEFAULT_LIVE_QUALITY : number = 7
-const DEFAULT_GPUs : number = 1
+const DEFAULT_GPUs : number = 5
 const DEFAULT_BITRATES : Map<VideoResolution, number> = new Map([
     [VideoResolution.H_NOVIDEO, 64 * 1000],
     [VideoResolution.H_144P, 320 * 1000],
@@ -21,8 +21,9 @@ const DEFAULT_BITRATES : Map<VideoResolution, number> = new Map([
 ])
 
 function getRandomGPU(min : number, max : number) : number  {
+  let maxG = pluginSettings.numGPUs;
   min = Math.ceil(min);
-  max = Math.floor(pluginSettings.numGPUs + 1);
+  max = Math.floor(maxG - 1);
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
