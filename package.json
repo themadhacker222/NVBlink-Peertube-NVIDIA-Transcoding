@@ -1,8 +1,8 @@
 {
-    "name": "peertube-plugin-hardware-transcode-nvenc",
-    "version": "0.0.1",
+    "name": "peertube-plugin-nvblink-hardware-transcode-nvenc",
+    "version": "1.0.1",
     "license": "MIT",
-    "description": "Plugin that adds transcode profiles which use NVIDIA NVENC for hardware acceleration",
+    "description": "Plugin that adds transcode profiles, multi-gpu parallel job runs, and settings which use NVIDIA NVDEC/NVENC for hardware acceleration",
     "engine": {
         "peertube": ">=5.1.0"
     },
@@ -10,9 +10,9 @@
         "peertube",
         "plugin"
     ],
-    "homepage": "https://github.com/ryanho/peertube-plugin-hardware-transcode-nvenc",
-    "author": "ryanho",
-    "bugs": "https://github.com/ryanho/peertube-plugin-hardware-transcode-nvenc/issues",
+    "homepage": "https://github.com/themadhacker222/NVBlink-Peertube-NVIDIA-Transcoding",
+    "author": "themadhacker",
+    "bugs": "https://github.com/themadhacker222/NVBlink-Peertube-NVIDIA-Transcoding/issues",
     "library": "./dist/main.js",
     "files": [
         "/dist"
